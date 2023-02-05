@@ -3,7 +3,7 @@ import { Repository } from "./Repository";
 
 export const RepositoryList = React.memo(({ getRepositories }) => {
   const [items, setItems] = React.useState([]);
-  const [query, setquery] = React.useState("facebook");
+  const [query, setQuery] = React.useState("facebook");
 
   React.useEffect(() => {
     getRepositories(query)
@@ -15,7 +15,7 @@ export const RepositoryList = React.memo(({ getRepositories }) => {
     <div className="list">
       <button
         className="float-btn-rocket"
-        onClick={() => setquery("rocketseat")}
+        onClick={() => setQuery("rocketseat")}
       >
         🚀
       </button>
